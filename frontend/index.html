@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopSphere e-commerce platform">
+  <title>ShopSphere | Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-container">
+
+      <section class="auth-hero">
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+
+        <div class="brand">
+          <div class="brand-icon">🛒</div>
+          <div>
+            <h1>ShopSphere</h1>
+            <span>Smart shopping, simplified.</span>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <span class="eyebrow">YOUR DIGITAL STORE</span>
+          <h2>Everything you need.<br><span>One smart place.</span></h2>
+          <p>Discover products, manage your cart, place orders and track your shopping activity from one clean dashboard.</p>
+
+          <div class="feature-list">
+            <div class="feature"><span>✓</span><div><strong>Easy shopping</strong><small>Browse products by category.</small></div></div>
+            <div class="feature"><span>✓</span><div><strong>Instant cart</strong><small>Update quantities in real time.</small></div></div>
+            <div class="feature"><span>✓</span><div><strong>Order tracking</strong><small>Keep your complete order history.</small></div></div>
+          </div>
+        </div>
+
+        <div class="hero-footer">© 2026 ShopSphere</div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="form-box" id="loginBox">
+          <div class="mobile-brand">🛒 ShopSphere</div>
+          <h2>Welcome back 👋</h2>
+          <p class="subtitle">Login to continue shopping.</p>
+
+          <form id="loginForm" novalidate>
+            <div class="input-group">
+              <label for="loginEmail">Email address</label>
+              <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="input-group">
+              <div class="label-row">
+                <label for="loginPassword">Password</label>
+              </div>
+              <div class="password-wrap">
+                <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password" required>
+                <button type="button" class="password-toggle" data-target="loginPassword" aria-label="Show password">Show</button>
+              </div>
+            </div>
+
+            <button type="submit" class="main-btn" id="loginBtn">
+              <span>Login</span>
+            </button>
+          </form>
+
+          <div id="loginMessage" class="message" aria-live="polite"></div>
+
+          <p class="switch">Don't have an account?
+            <button type="button" onclick="showRegister()">Create Account</button>
+          </p>
+        </div>
+
+        <div class="form-box hidden" id="registerBox">
+          <div class="mobile-brand">🛒 ShopSphere</div>
+          <h2>Create account 🚀</h2>
+          <p class="subtitle">Join ShopSphere and start shopping.</p>
+
+          <form id="registerForm" novalidate>
+            <div class="input-group">
+              <label for="registerName">Full name</label>
+              <input type="text" id="registerName" placeholder="Enter your full name" autocomplete="name" required>
+            </div>
+
+            <div class="input-group">
+              <label for="registerEmail">Email address</label>
+              <input type="email" id="registerEmail" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="input-group">
+              <label for="registerPassword">Password</label>
+              <div class="password-wrap">
+                <input type="password" id="registerPassword" placeholder="Create a password" autocomplete="new-password" minlength="4" required>
+                <button type="button" class="password-toggle" data-target="registerPassword" aria-label="Show password">Show</button>
+              </div>
+            </div>
+
+            <button type="submit" class="main-btn" id="registerBtn">
+              <span>Create Account</span>
+            </button>
+          </form>
+
+          <div id="registerMessage" class="message" aria-live="polite"></div>
+
+          <p class="switch">Already have an account?
+            <button type="button" onclick="showLogin()">Login</button>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
