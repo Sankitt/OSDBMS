@@ -1,0 +1,33 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563eb;--primary2:#4f46e5;--dark:#0f172a;--muted:#64748b;--border:#dbe3ef;--bg:#f8fafc}
+body{font-family:'Inter',sans-serif;min-height:100vh;color:var(--dark);background:#0f172a}
+button,input{font:inherit}
+button{cursor:pointer}
+.hidden{display:none!important}
+
+.auth-page{min-height:100vh;padding:24px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 15% 20%,#1e3a8a 0,#111827 48%,#020617 100%)}
+.auth-container{width:min(1120px,100%);min-height:680px;display:grid;grid-template-columns:1.02fr .98fr;overflow:hidden;border-radius:30px;background:#fff;box-shadow:0 35px 100px rgba(0,0,0,.38)}
+
+.auth-hero{position:relative;overflow:hidden;padding:52px;color:#fff;background:linear-gradient(145deg,#1e3a8a 0%,#2563eb 55%,#4f46e5 100%);display:flex;flex-direction:column;justify-content:space-between}
+.hero-orb{position:absolute;border-radius:50%;background:rgba(255,255,255,.08);pointer-events:none}
+.orb-one{width:330px;height:330px;right:-120px;top:-100px}.orb-two{width:260px;height:260px;left:-150px;bottom:-130px}
+.brand{position:relative;display:flex;align-items:center;gap:14px;z-index:1}.brand-icon{width:50px;height:50px;border-radius:15px;background:#fff;color:#2563eb;display:grid;place-items:center;font-size:25px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.brand h1{font-family:'Outfit',sans-serif;font-size:27px}.brand span{font-size:12px;opacity:.72}
+.hero-content{position:relative;z-index:1;max-width:510px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.8px;opacity:.72}
+.hero-content h2{font-family:'Outfit',sans-serif;font-size:48px;line-height:1.08;margin:14px 0 20px;letter-spacing:-1.5px}.hero-content h2 span{color:#bfdbfe}
+.hero-content>p{font-size:15px;line-height:1.7;max-width:480px;color:#dbeafe}
+.feature-list{margin-top:34px;display:grid;gap:15px}.feature{display:flex;align-items:center;gap:13px}.feature>span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);font-weight:800}.feature strong{display:block;font-size:14px}.feature small{display:block;margin-top:3px;font-size:12px;color:#dbeafe}.hero-footer{position:relative;z-index:1;font-size:12px;opacity:.55}
+
+.auth-panel{padding:60px 64px;display:flex;align-items:center;justify-content:center;background:#fff}
+.form-box{width:100%;max-width:390px;animation:fade .28s ease}.mobile-brand{display:none;color:var(--primary);font-weight:800;margin-bottom:30px}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.form-box h2{font-family:'Outfit',sans-serif;font-size:34px;letter-spacing:-.7px;margin-bottom:8px}.subtitle{color:var(--muted);font-size:14px;margin-bottom:30px}
+.input-group{margin-bottom:20px}.input-group label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.55px;color:#334155;margin-bottom:8px}.label-row{display:flex;justify-content:space-between}
+.input-group input{width:100%;height:50px;padding:0 15px;border:1px solid var(--border);border-radius:12px;outline:none;background:#f8fafc;color:var(--dark);transition:.2s}.input-group input:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(37,99,235,.1)}
+.password-wrap{position:relative}.password-wrap input{padding-right:65px}.password-toggle{position:absolute;right:8px;top:8px;height:34px;border:0;border-radius:8px;background:transparent;color:var(--primary);font-size:12px;font-weight:700;padding:0 8px}
+.main-btn{width:100%;height:50px;border:0;border-radius:12px;color:#fff;background:linear-gradient(135deg,var(--primary),var(--primary2));font-weight:800;box-shadow:0 8px 20px rgba(37,99,235,.25);transition:.2s}.main-btn:hover{transform:translateY(-1px);box-shadow:0 12px 25px rgba(37,99,235,.32)}.main-btn:disabled{opacity:.65;cursor:not-allowed;transform:none}
+.message{min-height:22px;text-align:center;margin-top:16px;font-size:13px;font-weight:600}.message.error{color:#dc2626}.message.success{color:#16a34a}.message.info{color:#2563eb}
+.switch{text-align:center;color:var(--muted);font-size:13px;margin-top:25px}.switch button{border:0;background:none;color:var(--primary);font-weight:800;margin-left:4px}.switch button:hover{text-decoration:underline}
+
+@media(max-width:900px){.auth-container{grid-template-columns:1fr;max-width:560px;min-height:auto}.auth-hero{display:none}.auth-panel{padding:48px 38px}.mobile-brand{display:block}}
+@media(max-width:480px){.auth-page{padding:0}.auth-container{min-height:100vh;border-radius:0}.auth-panel{padding:34px 24px}.form-box h2{font-size:30px}}
